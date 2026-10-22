@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #12001f;
+    background: #0b0014;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -9,23 +9,23 @@ body {
     width: 90%;
     max-width: 1000px;
     margin: 30px auto;
-    background-color: #24103b;
+    background: #24103b;
     border: 5px solid orange;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 0 30px orange;
+    box-shadow: 0 0 35px orange;
 }
 
 /* Navigation */
 header {
-    background-color: #090909;
-    padding: 20px;
+    background: #080808;
+    padding: 25px;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -33,14 +33,16 @@ nav ul {
 
 nav li {
     color: orange;
-    font-size: 20px;
+    font-size: 21px;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 nav li:hover {
-    color: #ff6600;
-    text-shadow: 0 0 10px orange;
+    color: white;
+    transform: scale(1.15);
+    text-shadow: 0 0 15px orange;
 }
 
 /* Main */
@@ -50,42 +52,53 @@ main {
 }
 
 h1 {
-    margin-top: 0;
+    margin: 0 0 25px;
     color: orange;
     font-size: 55px;
-    text-shadow: 3px 3px 0 #000, 0 0 15px orange;
+    text-shadow:
+        3px 3px 0 #000,
+        0 0 10px orange,
+        0 0 25px orange;
 }
 
+/* Halloween Image */
 main > img {
     display: block;
     width: 450px;
     max-width: 90%;
-    margin: 20px auto 40px;
+    margin: 20px auto 45px;
     border: 6px solid orange;
     border-radius: 20px;
-    box-shadow: 0 0 25px orange;
+    box-shadow: 0 0 30px orange;
+    transition: 0.4s;
+}
+
+main > img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 50px orange;
 }
 
 /* Sections */
 section {
     margin: 30px 0;
     padding: 25px;
-    background-color: #351650;
+    background: #351650;
     border: 2px solid #8a2be2;
     border-radius: 15px;
     text-align: left;
+    transition: 0.3s;
 }
 
 section:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 20px #8a2be2;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #8a2be2;
 }
 
 h2 {
     margin-top: 0;
     color: #ff8c00;
     font-size: 32px;
-    text-shadow: 0 0 8px orange;
+    text-shadow: 0 0 10px orange;
 }
 
 p {
@@ -95,9 +108,10 @@ p {
 
 /* Footer */
 footer {
-    padding: 20px;
-    background-color: #090909;
+    padding: 25px;
+    background: #080808;
     color: orange;
     text-align: center;
     font-weight: bold;
+    font-size: 18px;
 }
