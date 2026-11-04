@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images of Christ</title>
+    <style>
+        body {
+            background: black;
+        }
+        #wrapper {
+            width: 800px;
+            max-width: 95%;
+            margin: 0 auto;
+        }
+        nav {
+            color: white;
+            text-align: center;
+            font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        #gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border: 15px solid white;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ddd;
+}
+        #gallery a {
+            cursor: url('images/christus.png'), pointer;
+        }
+       #gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    opacity: 50%;
+    display: block;
+}
+
+#gallery img:hover {
+    opacity: 100%;
+}
+        @media (max-width: 850px) {
+            #gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            #gallery img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 2 / 3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <nav>
+            <h1>Christ Art Gallery</h1>
+        </nav>
+        <main>
+           <div id="gallery">
+    <a href="images/big/img1.jpg"><img src="images/small/img1.jpg" alt="Artwork depicting Jesus Christ, image 1" loading="lazy"></a>
+    <a href="images/big/img2.jpg"><img src="images/small/img2.jpg" alt="Artwork depicting Jesus Christ, image 2" loading="lazy"></a>
+    <a href="images/big/img3.jpg"><img src="images/small/img3.jpg" alt="Artwork depicting Jesus Christ, image 3" loading="lazy"></a>
+    <a href="images/big/img4.jpg"><img src="images/small/img4.jpg" alt="Artwork depicting Jesus Christ, image 4" loading="lazy"></a>
+    <a href="images/big/img5.jpg"><img src="images/small/img5.jpg" alt="Artwork depicting Jesus Christ, image 5" loading="lazy"></a>
+    <a href="images/big/img6.jpg"><img src="images/small/img6.jpg" alt="Artwork depicting Jesus Christ, image 6" loading="lazy"></a>
+    <a href="images/big/img7.jpg"><img src="images/small/img7.jpg" alt="Artwork depicting Jesus Christ, image 7" loading="lazy"></a>
+    <a href="images/big/img8.jpg"><img src="images/small/img8.jpg" alt="Artwork depicting Jesus Christ, image 8" loading="lazy"></a>
+    <a href="images/big/img9.jpg"><img src="images/small/img9.jpg" alt="Artwork depicting Jesus Christ, image 9" loading="lazy"></a>
+    <a href="images/big/img10.jpg"><img src="images/small/img10.jpg" alt="Artwork depicting Jesus Christ, image 10" loading="lazy"></a>
+    <a href="images/big/img11.jpg"><img src="images/small/img11.jpg" alt="Artwork depicting Jesus Christ, image 11" loading="lazy"></a>
+    <a href="images/big/img12.jpg"><img src="images/small/img12.jpg" alt="Artwork depicting Jesus Christ, image 12" loading="lazy"></a>
+</div>
+</body>
+</html>
