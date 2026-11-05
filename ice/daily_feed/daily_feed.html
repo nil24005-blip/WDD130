@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Feed Sign Up</title>
+
+    <style>
+        :root {
+            --bg-color: #786040;
+            --container-bg: #fffbf7;
+            --text-color: #33291e;
+            --accent-color: #a47e3b;
+            --accent-hover: #86642d;
+            --border-color: #d1c2b4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: var(--text-color);
+        }
+
+        #formContainer {
+            background: var(--container-bg);
+            width: 100%;
+            max-width: 420px;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Top Banner Image Styling */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .banner-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 35%;
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.35);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .banner-text h1 {
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .banner-text h2 {
+            font-size: 1.05rem;
+            font-weight: normal;
+            margin-top: 3px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        .form-content {
+            padding: 24px 28px 20px 28px;
+        }
+
+        #formContainer h3 {
+            margin-bottom: 18px;
+            font-size: 1.25rem;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        #closeBtn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: background 0.2s;
+        }
+
+        #closeBtn:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        #myForm {
+            display: grid;
+            gap: 14px;
+        }
+
+        #myForm label {
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        #myForm input[type="text"],
+        #myForm input[type="password"],
+        #myForm input[type="email"] {
+            width: 100%;
+            padding: 9px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            margin-top: 4px;
+            background-color: #fff;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        #myForm input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 5px rgba(164, 126, 59, 0.3);
+        }
+
+        /* Gender Radio Group */
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 4px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        /* Checkbox sections */
+        #myForm section {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+        }
+
+        #myForm input[type="checkbox"] {
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
+
+        /* Submit Button */
+        #myForm button[type="submit"] {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 11px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 4px;
+        }
+
+        #myForm button[type="submit"]:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Scripture Footer Navigation Images */
+        .scripture-footer {
+            display: flex;
+            background-color: #151515;
+            border-top: 2px solid var(--accent-color);
+            padding: 8px;
+            gap: 5px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .scripture-footer img {
+            width: 18.5%;
+            height: 75px;
+            object-fit: contain;
+            background-color: #000;
+            border: 1px solid #444;
+            border-radius: 4px;
+            transition: transform 0.2s, border-color 0.2s;
+            cursor: pointer;
+        }
+
+        .scripture-footer img:hover {
+            transform: scale(1.05);
+            border-color: var(--accent-color);
+        }
+
+        /* Output styling - hidden by default */
+        #output {
+            display: none;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 420px;
+            background: var(--container-bg);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        #output h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        #output ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        #output li {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="formContainer">
+        <button type="button" id="closeBtn">✕</button>
+        
+        <!-- Top Banner Header with Image and Titles -->
+        <div class="banner-container">
+            <img src="images/jesus_feeds_5000.jpeg" alt="Jesus feeds the multitude">
+            <div class="banner-text">
+                <h1>Daily Feed</h1>
+                <h2>Scripture a Day</h2>
+            </div>
+        </div>
+
+        <div class="form-content">
+            <h3>Sign Up for Daily Scripture Feed</h3>
+            <form id="myForm">
+                <div>
+                    <label for="username">User Name:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" id="male" name="gender" value="male" required> Male
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" id="female" name="gender" value="female" required> Female
+                        </label>
+                    </div>
+                </div>
+
+                <section>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to newsletter</label>
+                </section>
+
+                <section>
+                    <input type="checkbox" id="conditions" name="conditions" required>
+                    <label for="conditions">I acknowledge the terms and conditions</label>
+                </section>
+
+                <section>
+                    <button type="submit">Submit</button>
+                </section>
+            </form>
+        </div>
+
+        <!-- Bottom Scripture Footer Images -->
+        <div class="scripture-footer">
+            <img src="images/old_testament.webp" alt="Old Testament">
+            <img src="images/new_testament.webp" alt="New Testament">
+            <img src="images/book_of_mormon.webp" alt="Book of Mormon">
+            <img src="images/doctrine_and_covenants.webp" alt="Doctrine and Covenants">
+            <img src="images/pearl_of_great_price.webp" alt="Pearl of Great Price">
+        </div>
+    </div>
+
+    <div id="output"></div>
+
+    <script>
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("formContainer").style.display = "none";
+        });
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const entries = [];
+
+            for (const [key, value] of formData.entries()) {
+                if (key == "password") {
+                    entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
+                } else {
+                    entries.push(`<strong>${key}</strong>: ${value}`);
+                }
+            }
+
+            output.innerHTML = `
+            <br>  
+            <h3>Here is the data that would be sent to the server:</h3>
+            <ul>
+                ${entries.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+            `;
+            output.style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>
