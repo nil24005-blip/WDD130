@@ -1,82 +1,337 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manuel Nilsen | WDD 130 Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F4F1E8;
+            color: #252525;
+        }
+
+        header {
+            background-color: #24352A;
+            color: #F4F1E8;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .logo {
+            font-size: 30px;
+        }
+
+        header h1 {
+            font-family: 'Averia Gruesa Libre', cursive;
+            font-size: 42px;
+            margin: 5px;
+        }
+
+        nav {
+            background-color: #3E5C45;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 18px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #A8B5A2;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2, h3 {
+            font-family: 'Averia Gruesa Libre', cursive;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+        }
+
+        .hero img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .projects-title {
+            text-align: center;
+            font-size: 36px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 45px;
+        }
+
+        .project-card {
+            background: white;
+            border: 2px solid #A8B5A2;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+            padding: 22px;
+        }
+
+        .project-card h3 {
+            background: #3E5C45;
+            color: white;
+            padding: 15px;
+            margin: -22px -22px 18px;
+            text-align: center;
+        }
+
+        .project-card p {
+            line-height: 1.6;
+        }
+
+        .project-card a, button {
+            display: inline-block;
+            background: #3E5C45;
+            color: white;
+            padding: 11px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .project-card a:hover, button:hover {
+            background: #24352A;
+        }
+
+        .extra-section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 2px solid #A8B5A2;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #A8B5A2;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #3E5C45;
+            color: white;
+        }
+
+        form {
+            display: grid;
+            gap: 12px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #A8B5A2;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        footer {
+            background: #24352A;
+            color: #F4F1E8;
+            padding: 30px 8%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        footer a {
+            color: #A8B5A2;
+            margin-right: 15px;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav {
+                gap: 18px;
+                flex-wrap: wrap;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            .hero h2 {
+                font-size: 29px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <header>
-
+        <div class="logo">▲ ▲ ▲</div>
         <h1>Manuel Nilsen</h1>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="wwr/index.html">WWR</a>
-            <a href="ice/index.html">ICE</a>
-            <a href="about.html">About Me</a>
-        </nav>
-
     </header>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="wwr/index.html">WWR</a>
+        <a href="ice.html">ICE</a>
+        <a href="about.html">ABOUT ME</a>
+    </nav>
 
     <main>
 
-        <section>
-            <h2>Welcome to My Portal</h2>
+        <section class="hero">
+            <h2>WELCOME TO MY PORTAL</h2>
 
-            <img src="logo.png/Mn mountain in for web portal.jpeg" alt="Mountain landscape">
+            <img src="logo.png/Mn%20mountain%20in%20for%20web%20portal.jpeg"
+                 alt="Mountain landscape with MN stone sign">
 
             <p>
-                Welcome to my WDD 130 portfolio. Here you can see the
-                projects and assignments I have completed.
+                Welcome to my WDD 130 portfolio! Here you can explore
+                the projects and assignments I have completed throughout
+                the course. I have learned how to use HTML and CSS to
+                build and design websites.
             </p>
         </section>
 
-        <section>
-            <h2>My Projects</h2>
+        <h2 class="projects-title">MY PROJECTS</h2>
 
-            <div>
-                <article>
-                    <h3>WWR</h3>
-                    <p>
-                        My White Water Rafting project where I practiced
-                        HTML and CSS to create a website.
-                    </p>
-                    <a href="wwr/index.html">View WWR Project</a>
-                </article>
+        <div class="project-grid">
 
-                <article>
-                    <h3>ICE Challenges</h3>
-                    <p>
-                        A collection of coding challenges and activities
-                        that helped me practice web development.
-                    </p>
-                    <a href="ice/index.html">View ICE Projects</a>
-                </article>
+            <article class="project-card">
+                <h3>WWR</h3>
+                <p>
+                    My White Water Rafting project where I practiced
+                    HTML and CSS to create a website.
+                </p>
+                <a href="wwr/index.html">View WWR Project</a>
+            </article>
 
-                <article>
-                    <h3>About Me</h3>
-                    <p>
-                        Learn more about me, my interests, and my experience
-                        as a WDD 130 student.
-                    </p>
-                    <a href="about.html">Learn More</a>
-                </article>
-            </div>
+            <article class="project-card">
+                <h3>ICE Challenges</h3>
+                <p>
+                    A collection of coding challenges that helped me
+                    practice web development and improve my skills.
+                </p>
+                <a href="ice.html">View ICE Projects</a>
+            </article>
+
+            <article class="project-card">
+                <h3>About Me</h3>
+                <p>
+                    Learn more about me, my interests, and my experience
+                    as a WDD 130 student.
+                </p>
+                <a href="about.html">Learn More</a>
+            </article>
+
+        </div>
+
+        <section class="extra-section">
+            <h2>WHAT I'VE BEEN LEARNING</h2>
+            <p>Some of the skills I have practiced in WDD 130 include:</p>
+
+            <ul>
+                <li>Building webpages with HTML</li>
+                <li>Styling websites with CSS</li>
+                <li>Using CSS Grid and positioning</li>
+                <li>Creating links between webpages</li>
+            </ul>
+        </section>
+
+        <section class="extra-section">
+            <h2>MY COURSE PROJECTS</h2>
+
+            <table>
+                <tr>
+                    <th>Project</th>
+                    <th>Skills Practiced</th>
+                </tr>
+                <tr>
+                    <td>WWR</td>
+                    <td>HTML and CSS</td>
+                </tr>
+                <tr>
+                    <td>ICE Challenges</td>
+                    <td>HTML, CSS, and Grid</td>
+                </tr>
+                <tr>
+                    <td>Portal Page</td>
+                    <td>Web design and development</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="extra-section">
+            <h2>CONTACT ME</h2>
+            <p>Use this form to leave a message.</p>
+
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
         </section>
 
     </main>
 
     <footer>
-        <p>Contact / Links</p>
-        <p>&copy; 2026 Manuel Nilsen</p>
+        <div>
+            <h3>Contact / Links</h3>
+            <a href="index.html">Home</a>
+            <a href="wwr/index.html">WWR</a>
+            <a href="ice.html">ICE</a>
+        </div>
+
+        <p>© 2026 Manuel Nilsen</p>
     </footer>
 
 </body>
-
 </html>
-
-<link rel="stylesheet" href="styles/style.css">
