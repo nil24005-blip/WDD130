@@ -1,0 +1,302 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore skiing and snowboarding in Idaho with mountain preparation and safety tips.">
+    <title>Skiing & Snowboarding | Idaho Outdoor Adventures</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F4F1E8;
+            color: #252525;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4e6857;
+            padding: 15px 5%;
+        }
+
+        .header-content {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #385342;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, serif;
+        }
+
+        .hero {
+            background:
+                linear-gradient(rgba(36,53,42,.35), rgba(36,53,42,.55)),
+                url("images/idaho-skiing.jpg");
+            background-size: cover;
+            background-position: center;
+            min-height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 850px;
+            margin: auto auto 40px;
+        }
+
+        h2 {
+            color: #385342;
+            font-size: 30px;
+        }
+
+        .content-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            margin: 35px 0;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #A8B5A2;
+        }
+
+        .content-row img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content-text {
+            padding: 25px;
+        }
+
+        .content-text h2 {
+            color: #385342;
+        }
+
+        .gear-list {
+            background-color: white;
+            padding: 25px 35px;
+            border-radius: 10px;
+            border-left: 6px solid #4F91A8;
+            margin: 35px 0;
+        }
+
+        .gear-list li {
+            margin: 10px 0;
+        }
+
+        .closing {
+            background-color: #A8B5A2;
+            color: #385342;
+            text-align: center;
+            padding: 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 45px;
+        }
+
+        footer {
+            background-color: #385342;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        footer a:hover {
+            color: #A8B5A2;
+        }
+
+        @media screen and (max-width: 700px) {
+            .header-content {
+                flex-direction: column;
+            }
+
+            nav {
+                text-align: center;
+                margin-top: 15px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .content-row {
+                grid-template-columns: 1fr;
+            }
+
+            .content-row img {
+                height: 230px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="index.html">
+                <img class="logo"
+                     src="images/idaho-outdoor-logo.png"
+                     alt="Idaho Outdoor Adventures logo">
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="skiing.html">Skiing & Snowboarding</a>
+                <a href="fishing-hiking.html">Fishing & Hiking</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Skiing & Snowboarding in Idaho</h1>
+            <p>Enjoy Idaho's mountains and make the most of winter.</p>
+        </div>
+    </section>
+
+    <main>
+
+        <section class="intro">
+            <h2>Enjoy Idaho's Winter Mountains</h2>
+
+            <p>
+                Idaho winters create great opportunities to spend time outside.
+                Skiing and snowboarding are fun ways to enjoy the mountains,
+                get exercise, and spend time with friends. Whether you are
+                learning the basics or already feel comfortable on the slopes,
+                planning ahead can make your day better.
+            </p>
+        </section>
+
+        <section class="content-row">
+            <img src="images/idaho-skiing.jpg"
+                 alt="Skiers enjoying a snowy mountain slope in Idaho">
+
+            <div class="content-text">
+                <h2>Plan Your Mountain Day</h2>
+
+                <p>
+                    Before leaving, check the mountain's current weather,
+                    road conditions, and lift information. Dress in layers,
+                    wear a helmet, bring water, and make sure your equipment
+                    fits correctly. Conditions can change quickly, so stay
+                    aware of the weather and follow posted mountain signs
+                    and resort instructions.
+                </p>
+            </div>
+        </section>
+
+        <section class="content-row">
+            <div class="content-text">
+                <h2>What to Bring</h2>
+
+                <p>Make sure you are prepared before heading to the mountain.</p>
+
+                <ul>
+                    <li>Skis or snowboard with properly fitted boots and bindings</li>
+                    <li>Helmet and goggles</li>
+                    <li>Warm layers, gloves, and waterproof outerwear</li>
+                    <li>Water and snacks</li>
+                    <li>Phone, charged battery, and a plan for meeting your group</li>
+                </ul>
+            </div>
+
+            <img src="images/idaho-snowboarder.jpg"
+                 alt="Snowboarder turning on a snow-covered slope">
+        </section>
+
+        <section class="content-row">
+            <img src="images/idaho-snowboarder.jpg"
+                 alt="Snowboarder riding down an Idaho mountain">
+
+            <div class="content-text">
+                <h2>Respect the Mountain</h2>
+
+                <p>
+                    Know your ability level, stay in control, look uphill
+                    before entering a trail, and give other people room.
+                    Stay on open marked runs and follow all resort safety
+                    rules. A good mountain day is one where everyone
+                    gets home safely.
+                </p>
+            </div>
+        </section>
+
+        <section class="closing">
+            <p>
+                Prepare well, ride within your ability, and enjoy
+                Idaho's winter scenery.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>Idaho Outdoor Adventures</h3>
+        <p>Get outside and explore Idaho.</p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="skiing.html">Skiing & Snowboarding</a>
+            <a href="fishing-hiking.html">Fishing & Hiking</a>
+        </nav>
+
+        <p>© 2026 Idaho Outdoor Adventures | WDD 130</p>
+    </footer>
+
+</body>
+</html>
+```

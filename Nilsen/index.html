@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Idaho's outdoor adventures including skiing, snowboarding, fly fishing, and hiking.">
+    <title>Idaho Outdoor Adventures | Home</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F4F1E8;
+            color: #252525;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4e6857;
+            padding: 15px 5%;
+        }
+
+        .header-content {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #385342;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, serif;
+        }
+
+        .hero {
+            background:
+                linear-gradient(rgba(36,53,42,.35), rgba(36,53,42,.55)),
+                url("images/idaho-mountains.jpg");
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 45px;
+        }
+
+        h2 {
+            color: #385342;
+            font-size: 30px;
+        }
+
+        .adventures > h2 {
+            text-align: center;
+        }
+
+        .adventure {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 30px;
+            margin: 35px 0;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #A8B5A2;
+        }
+
+        .adventure img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .adventure-text {
+            padding: 25px;
+        }
+
+        .adventure-text h3 {
+            color: #385342;
+            font-size: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #385342;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #385342;
+        }
+
+        .closing {
+            background-color: #A8B5A2;
+            color: #385342;
+            text-align: center;
+            padding: 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 45px;
+        }
+
+        footer {
+            background-color: #385342;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        footer a:hover {
+            color: #A8B5A2;
+        }
+
+        @media screen and (max-width: 700px) {
+            .header-content {
+                flex-direction: column;
+            }
+
+            nav {
+                text-align: center;
+                margin-top: 15px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .adventure {
+                grid-template-columns: 1fr;
+            }
+
+            .adventure img {
+                height: 230px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+
+            <a href="index.html">
+                <img class="logo"
+                     src="images/idaho-outdoor-logo.png"
+                     alt="Idaho Outdoor Adventures logo">
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="skiing.html">Skiing & Snowboarding</a>
+                <a href="fishing-hiking.html">Fishing & Hiking</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Explore the Outdoors in Idaho</h1>
+            <p>Find your next adventure, from snowy mountain slopes to quiet rivers and scenic trails.</p>
+        </div>
+    </section>
+
+    <main>
+
+        <section class="intro">
+            <h2>Welcome to Idaho Outdoor Adventures</h2>
+
+            <p>
+                Idaho is full of places to get outside and enjoy something new.
+                Whether you like spending a day on the mountain, casting a fly
+                into a river, or hiking to a great view, there is an adventure
+                waiting for you. Idaho Outdoor Adventures shares ideas and
+                simple tips to help you plan your next trip and make the most
+                of the outdoors.
+            </p>
+        </section>
+
+        <section class="adventures">
+
+            <h2>Choose Your Adventure</h2>
+
+            <div class="adventure">
+
+                <img src="images/idaho-skiing.jpg"
+                     alt="Skiers enjoying a snowy mountain slope in Idaho">
+
+                <div class="adventure-text">
+                    <h3>Skiing & Snowboarding</h3>
+
+                    <p>
+                        Winter is a great time to explore Idaho's mountains.
+                        Check out the skiing and snowboarding page for ideas
+                        about mountain days, what to bring, and how to prepare
+                        for changing conditions.
+                    </p>
+
+                    <a class="button" href="skiing.html">
+                        Explore Skiing & Snowboarding
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="adventure">
+
+                <img src="images/idaho-hiking-trail.jpg"
+                     alt="Hiker walking along a mountain trail in Idaho">
+
+                <div class="adventure-text">
+                    <h3>Fishing & Hiking</h3>
+
+                    <p>
+                        When the weather warms up, Idaho's rivers and trails
+                        offer plenty of ways to explore. Visit the fishing
+                        and hiking page for basic tips, planning ideas, and
+                        reminders to respect the outdoors.
+                    </p>
+
+                    <a class="button" href="fishing-hiking.html">
+                        Explore Fishing & Hiking
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="closing">
+            <p>
+                Get outside, try something new, and leave every place
+                better than you found it.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <h3>Idaho Outdoor Adventures</h3>
+
+        <p>Get outside and explore Idaho.</p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="skiing.html">Skiing & Snowboarding</a>
+            <a href="fishing-hiking.html">Fishing & Hiking</a>
+        </nav>
+
+        <p>© 2026 Idaho Outdoor Adventures | WDD 130</p>
+
+    </footer>
+
+</body>
+</html>

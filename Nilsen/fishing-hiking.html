@@ -1,0 +1,290 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover fly fishing and hiking in Idaho with outdoor preparation and Leave No Trace tips.">
+    <title>Fishing & Hiking | Idaho Outdoor Adventures</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F4F1E8;
+            color: #252525;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4e6857;
+            padding: 15px 5%;
+        }
+
+        .header-content {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #385342;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, serif;
+        }
+
+        .hero {
+            background:
+                linear-gradient(rgba(36,53,42,.35), rgba(36,53,42,.55)),
+                url("images/idaho-hiking-trail.jpg");
+            background-size: cover;
+            background-position: center;
+            min-height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 850px;
+            margin: auto auto 40px;
+        }
+
+        h2 {
+            color: #385342;
+            font-size: 30px;
+        }
+
+        .content-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            margin: 35px 0;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #A8B5A2;
+        }
+
+        .content-row img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content-text {
+            padding: 25px;
+        }
+
+        .content-text h2 {
+            color: #385342;
+        }
+
+        .closing {
+            background-color: #A8B5A2;
+            color: #385342;
+            text-align: center;
+            padding: 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 45px;
+        }
+
+        footer {
+            background-color: #385342;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        footer a:hover {
+            color: #A8B5A2;
+        }
+
+        @media screen and (max-width: 700px) {
+            .header-content {
+                flex-direction: column;
+            }
+
+            nav {
+                text-align: center;
+                margin-top: 15px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .content-row {
+                grid-template-columns: 1fr;
+            }
+
+            .content-row img {
+                height: 230px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="index.html">
+                <img class="logo"
+                     src="images/idaho-outdoor-logo.png"
+                     alt="Idaho Outdoor Adventures logo">
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="skiing.html">Skiing & Snowboarding</a>
+                <a href="fishing-hiking.html">Fishing & Hiking</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Fishing & Hiking in Idaho</h1>
+            <p>Explore Idaho's rivers, forests, and mountain trails.</p>
+        </div>
+    </section>
+
+    <main>
+
+        <section class="intro">
+            <h2>Explore Idaho's Rivers and Trails</h2>
+
+            <p>
+                Idaho has rivers, streams, forests, and mountain trails
+                that make it easy to enjoy the outdoors. Fly fishing gives
+                you a chance to slow down and pay attention to the water,
+                while hiking lets you explore new places and see the
+                landscape from a different point of view.
+            </p>
+        </section>
+
+        <section class="content-row">
+            <img src="images/idaho-fly-fishing.jpg"
+                 alt="Angler fly fishing in a clear Idaho river">
+
+            <div class="content-text">
+                <h2>A Day of Fly Fishing</h2>
+
+                <p>
+                    A successful fishing trip starts with preparation.
+                    Check local fishing regulations before you go, make
+                    sure you have the correct license, and learn about
+                    any special rules for the water you plan to fish.
+                    Bring a rod, reel, flies, leader, tippet, polarized
+                    sunglasses, water, and weather-appropriate clothing.
+                    Be patient, respect other anglers, and handle fish
+                    carefully if you plan to release them.
+                </p>
+            </div>
+        </section>
+
+        <section class="content-row">
+            <div class="content-text">
+                <h2>Find a Trail and Get Ready</h2>
+
+                <p>
+                    For a hike, choose a trail that matches your experience
+                    and the time you have available. Check the forecast and
+                    trail conditions, tell someone where you are going, and
+                    bring enough water, food, layers, and a basic first-aid
+                    kit. Stay on marked trails and give wildlife plenty
+                    of space.
+                </p>
+            </div>
+
+            <img src="images/idaho-hiking-trail.jpg"
+                 alt="Hiker looking over an Idaho mountain valley">
+        </section>
+
+        <section class="content-row">
+            <img src="images/idaho-river.jpg"
+                 alt="Clear river flowing through an Idaho valley">
+
+            <div class="content-text">
+                <h2>Leave No Trace</h2>
+
+                <p>
+                    Pack out your trash, avoid damaging plants, respect
+                    wildlife, and leave natural features where you find
+                    them. Being responsible outdoors helps keep Idaho's
+                    rivers and trails enjoyable for the next person.
+                </p>
+            </div>
+        </section>
+
+        <section class="closing">
+            <p>
+                Slow down, explore responsibly, and enjoy everything
+                Idaho's outdoors has to offer.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>Idaho Outdoor Adventures</h3>
+        <p>Get outside and explore Idaho.</p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="skiing.html">Skiing & Snowboarding</a>
+            <a href="fishing-hiking.html">Fishing & Hiking</a>
+        </nav>
+
+        <p>© 2026 Idaho Outdoor Adventures | WDD 130</p>
+    </footer>
+
+</body>
+</html>
+```
